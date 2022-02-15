@@ -31,7 +31,7 @@ body {
 }
 
 .container-img {
-    background: url('img/undraw_accept_terms_re_lj38.svg') no-repeat center center/contain;
+    background: url('undraw_accept_terms_re_lj38.svg') no-repeat center center/contain;
     height: 100vh;
     flex: 1;
 }
