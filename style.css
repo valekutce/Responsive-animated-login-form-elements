@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --dark-color: #222;
+    --primary-color: #00E472;
+    --secondary-color: rgb(169, 253, 211);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(120deg, #64e6a5 20%, #b1f1d1 40%, #fff 80%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container-img {
+    background: url('img/undraw_accept_terms_re_lj38.svg') no-repeat center center/contain;
+    height: 100vh;
+    flex: 1;
+}
+
+.container-form {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form {
+    width: 350px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--secondary-color);
+}
+
+.form h2 {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    color: var(--black-color);
+}
+
+.form img {
+    width: 100px;
+}
+
+.form-group {
+    position: relative;
+    height: 3rem;
+    margin: 25px 0;
+    padding: 5px;
+}
+
+.form-group i {
+    font-size: 1rem;
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black-color);
+}
+
+.input {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid var(--black-color);
+    border-radius: 1rem;
+    background: none;
+    padding-left: 3rem;
+    font-size: 1.2rem;
+    color: var(--black-color);
+    transition: .2s;
+}
+
+label {
+    position: absolute;
+    top: 1rem;
+    left: 2.5rem;
+    font-size: 1rem;
+    color: var(--black-color);
+    transition: .3s;
+}
+
+.input:focus + label {
+    top: -.5rem;
+    left: 1rem;
+    font-size: .9rem;
+    color: var(--black-color);
+    background: var(--secondary-color);
+    padding: 0 .2rem;
+}
+
+.input:not(:placeholder-shown).input:not(:focus) + label {
+    top: -.5rem;
+    left: 1rem;
+    font-size: .9rem;
+    color: var(--black-color);
+    background: var(--secondary-color);
+    padding: 0 .2rem;
+}
+
+
+.input:focus {
+    border: 2px solid var(--primary-color);
+}
+
+.btn {
+    font-family: inherit;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background: var(--black-color);
+    color: var(--white-color);
+    transition: .3s;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-img {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    body, .form {
+        background: none;
+    }
+    
+    .input:focus + label, 
+    .input:not(:placeholder-shown).input:not(:focus) + label {
+        background: var(--white-color);
+    }
+
+}
