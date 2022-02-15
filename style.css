@@ -172,7 +172,7 @@ label {
 
 @media screen and (max-width: 500px) {
     body, .form {
-        background: none;
+        background: #a9fdd3;
     }
     
     .input:focus + label, 
